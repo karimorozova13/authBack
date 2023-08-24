@@ -38,7 +38,7 @@ app.use((err, _, res, __) => {
 
 // connect app to DB
 mongoose.Promise = global.Promise;
-const { DB_HOST, PORT } = process.env;
+const { DB_HOST, PORT = 3003 } = process.env;
 
 mongoose
   .connect(DB_HOST)
